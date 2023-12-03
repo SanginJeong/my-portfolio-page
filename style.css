@@ -1,0 +1,194 @@
+body{
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: #212529;
+}
+h4{
+  color: grey;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+nav h2{
+  color: #ffb742;
+}
+nav ul{
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+nav ul li{
+  padding: 0 2rem;
+  list-style: none;
+}
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin-right: 25px;
+}
+.hire_btn{
+  background-color: #ffb742;
+  padding: 6px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 120px;
+}
+.hire_btn:hover{
+  background-color: beige;
+}
+.main{
+  text-align: center;
+  height: 200px;
+  margin-top: 150px;
+}
+#about{
+  padding: 0 20px;
+}
+.seperator{
+  color: #ffb742;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-block;
+  color: #ffb742;
+  border-radius: 12px;
+}
+#about > div{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 20px;
+}
+#about div img{
+  max-width: 100%;
+  min-height: 100%;
+  min-width: 200px
+}
+.information{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#skills{
+  margin-top: 100px;
+  padding: 0 20px;
+  margin-bottom: 100px;
+}
+.myskills{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 50px;
+}
+#skills_icons{
+  font-size: 50px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 30px;
+  align-items: center;
+  text-align: center;
+  border: 1px solid  rgba(255, 255, 255, 0.08);
+  border-radius: 13px;
+  padding: 20px 0;
+}
+footer{
+  background-color: black;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.start{
+  background-color: #ffb742;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  width: 70%;
+  padding: 12px 24px;
+  border-radius: 15px;
+  top: -16%;
+  left: 13%;
+  color: black;
+}
+.start h4{
+  color: black;
+}
+.cols{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+.cols > div{
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+.cols > div > a, .cols > div > h5{
+  color: grey;
+  text-decoration: none;
+}
+.hamburger{
+  display: none;
+  position: absolute;
+  top: 3.55%;
+  right: 5%;
+}
+.hamburger button{
+  font-size: 24px;
+  color: #ffb742;
+  background: none;
+  border: none;
+}
+br{
+  display: none;
+}
+@media screen and (max-width : 940px) {
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    display: none;
+  }
+  nav ul li{
+    padding: 10px 0;
+  }
+  nav button{
+    display: none;
+  }
+  nav ul.active{
+    display: flex;
+  }
+  nav button.active{
+    display: flex;
+  }
+  .hamburger{
+    display: block;
+  }
+  br{
+    display: block;
+  }
+  #about > div,.myskills{
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .start{
+    flex-direction: column;
+    top: -25%;
+  }
+  footer{
+    height: 400px;
+    margin-top: 150px;
+  }
+}
+@media screen and (max-width : 480px) {
+  .start{
+    left: 9%;
+  }
+}
